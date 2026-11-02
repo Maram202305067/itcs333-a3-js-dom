@@ -35,11 +35,11 @@
             const isCompleted = item.classList.contains("completed");
 
             if (currentFilter === "all") {
-                item.hidden = false;
+                item.style.display = "";
             } else if (currentFilter === "active") {
-                item.hidden = isCompleted;
+                item.style.display = isCompleted ? "none" : "";
             } else if (currentFilter === "done") {
-                item.hidden = !isCompleted;
+               item.style.display = isCompleted ? "" : "none";
             }
         });
     }
